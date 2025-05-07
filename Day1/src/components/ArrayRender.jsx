@@ -140,16 +140,20 @@ const ArrayRender = () => {
     return(
 <section>
 <h2>UserInfo</h2>
-{
 
+<ul>
+    {
 UerInfo.map(
 
-({name,country,age,gender,id})=>{
-    return <p key={id}>User Name{name} & User Orign {country} & User Age {age} & User Gender {gender} and index {id}</p>
+({name,country,age,gender,id},index)=>{
+    return <li key={id}>User Name{name} & User Orign {country} & User Age {age} & User Gender {gender} and index {index+1}</li>
 }
 
 )
 }
+</ul>
+
+
 </section>
 
 
