@@ -1,6 +1,19 @@
 import Cart from "../../Day1/src/components/Cart";
 import Child from "./components/Child";
 import Children from "./components/Children";
+const IsValidView = () => <h2>isValid</h2>;
+const IsInvalidView = () => <h2>isInvalid</h2>;
+
+const Password=({isPasswordValid})=> {
+  return(
+    <section>
+    <h2>Password</h2>
+    {isPasswordValid ? <IsValidView /> : <IsInvalidView />} 
+    </section>
+  )
+}
+
+
 const App = ()=>{
 
 
@@ -57,6 +70,12 @@ Hobbies={[
 
 
 <Cart/>
+
+
+{/* // conditional rendering */}
+
+
+<Password isPasswordValid={false}/>
 
 
 </section>
