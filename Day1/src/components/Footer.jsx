@@ -7,8 +7,7 @@ const Footer = () => {
 <footer>
 
      <p>Copyright &copy; 2025</p>
-     <p>Elliot</p>
-
+cd 
 </footer>
 )
 }
