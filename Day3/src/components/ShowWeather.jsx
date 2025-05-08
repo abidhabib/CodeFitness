@@ -7,6 +7,16 @@ const ShowWeather = ({temp})=>{
     const [count , setCount]=useState(0)
     const increment = ()=> setCount(curr=>curr+1)
     const [bg,setBg]=useState("red")
+    const [fuck,setFuck]=useState('Fuck WindSurf ')
+    const fuckToFuckYou = (p)=> {
+        setFuck(curr=>{
+            console.log(curr);
+            return curr ==='Fuck WindSurf '? 'Fuck You' : 'Fuck WindSurf ';
+            
+        })
+        return console.log(p);
+        
+    }
     const changeBg=()=> setBg(q => (q === "red" ? "blue" : "red"))
 
 
@@ -34,6 +44,7 @@ const ShowWeather = ({temp})=>{
 <button onClick={increment}>Increment</button>
 <button onClick={changeBg}>Change Background</button>
 </h1>
+<button onClick={fuckToFuckYou}>{fuck}</button>
 </section>
 
 
