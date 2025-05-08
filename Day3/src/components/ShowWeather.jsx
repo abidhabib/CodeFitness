@@ -39,7 +39,7 @@ const ShowWeather = ({temp})=>{
 
 
 const updateMovies = ()=>{
-    setMovies([...movies,{name:"Inception",rating:5},{name:"Inception",rating:5}])
+    setMovies(prev=> prev.map((movie)=>movie.name==='Inception'?{...movie,rating:99}:movie))
 }
 
 
