@@ -2,8 +2,7 @@ import AddMovie from "./components/AddMovie"
 import Increment from "./components/Increment"
 import Decement from "./components/Decement"
 import { useState } from "react"
-import RandomTest from "./components/RandomTest"
-import RT from "./components/RT"
+import RD from "./components/RandomTest"
 const App = ()=>{
 
 const [count,setCount]=useState(0)
@@ -26,8 +25,7 @@ Math.floor(Math.random()*100)
 
 <Increment count={count} Onincrement={increment} random={rendom}/>
 <Decement count={count} Ondecrement={decrement} />
-<RandomTest/> 
-<RT/>
+<RD/>
 
 </section>
 
