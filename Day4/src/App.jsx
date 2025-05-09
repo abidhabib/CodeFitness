@@ -3,7 +3,7 @@ import Increment from "./components/Increment"
 import Decement from "./components/Decement"
 import { useState } from "react"
 import RandomTest from "./components/RandomTest"
-
+import RT from "./components/RT"
 const App = ()=>{
 
 const [count,setCount]=useState(0)
@@ -27,6 +27,7 @@ Math.floor(Math.random()*100)
 <Increment count={count} Onincrement={increment} random={rendom}/>
 <Decement count={count} Ondecrement={decrement} />
 <RandomTest/> 
+<RT/>
 
 </section>
 
