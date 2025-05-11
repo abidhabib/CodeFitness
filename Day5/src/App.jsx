@@ -1,25 +1,29 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import { useState } from 'react'
+ const App = () => {
 
-function App() {
-  const [count, setCount] = useState(()=>
+const [count,setCount]=useState(()=>{
+
+const fromLocalStorage=localStorage.getItem('count')
+return fromLocalStorage?JSON.parse(fromLocalStorage):0
+
+})
 
 
-localStorage.getItem('number')?JSON.parse(localStorage.getItem('number')):0
+useEffect(()=>{
 
+localStorage.setItem('count',10)
 
-
-  )
-  useEffect(()=>{
-    localStorage.setItem('number',JSON.stringify('786'))
-  },[count])
-console.log(count);
-
+},[])
 
   return (
-    <>
-    
-    </>
+    <section>
+    <p>{count}</p>
+    <button onClick={()=>setCount(()=>{
+      localStorage.setItem('count',count+1)
+      return count+1
+    })}>Increment</button>
+    </section>
   )
 }
 
