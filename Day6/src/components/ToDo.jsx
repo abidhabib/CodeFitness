@@ -35,7 +35,23 @@ setItems(()=>
     items.filter((i)=>i.id !==   id)
 )
 }
+const updateItem=(id)=>{
 
+console.log(id);
+setItems(items.map((i)=>{
+return i.id==id?{
+
+id:id,
+name:"Updated",
+isDone:true,
+details:"Updated"
+
+}:i 
+
+}))
+
+
+}
   return (
     <section>
 
@@ -48,7 +64,10 @@ setItems(()=>
 
 <li key={i.id}>{i.name}{i.id} <br /> {i.details} <br /> {i.isDone?"Done":"Not Done"} <button onClick={()=>deleteItem(i.id)}>
     Delete
-    </button> </li>
+    </button> 
+    <button onClick={()=>updateItem(i.id)}>Update</button>
+    
+    </li>
     )
 }
 <button onClick={addItems}>
