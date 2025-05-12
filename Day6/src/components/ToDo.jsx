@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
 
-
+import Popup from './Popup'
 
 
 const ToDo = () => {
+    const [isCopy,setIsCopy]=useState(false)
 const [copy,setCopy]=useState([])
     const [items, setItems] = useState([
         {
@@ -61,6 +62,10 @@ setCopy(copyItem)
 navigator.clipboard.writeText(copyItem)
 .then(()=>{ 
     alert("Copied")
+    setIsCopy(true)
+    setTimeout(() => {
+        setIsCopy(false)
+    }, 2000);
     
 }).catch(()=>{
     alert("Failed")
@@ -92,7 +97,7 @@ console.log(copyItem);
             <button onClick={addItems}>
                 Add
             </button>
-
+<Popup copy={isCopy}/>
         </section>
     )
 }
