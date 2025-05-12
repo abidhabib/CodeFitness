@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import ToDo from './components/ToDo'
 
 const App = () => {
   const [value,setvalue]=useState('Starting')
@@ -18,8 +19,12 @@ console.log(value);
 }
 const handleShowValue=(event)=>{
   event.preventDefault();
-  
 
+
+}
+const ClearData = ()=>{
+
+  setvalue('')
 }
 
   return (
@@ -34,6 +39,11 @@ const handleShowValue=(event)=>{
 <button onClick={handleShowValue}>
 Submit
 </button>
+<button onClick={ClearData}>
+Clear
+</button>
+
+<ToDo/>
     </section>
 
 
