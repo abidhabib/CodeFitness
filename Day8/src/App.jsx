@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import C1 from './components/C1'
 
 const App = () => {
 
@@ -18,12 +19,13 @@ fetchData()
 
   },[])
 
-
+const a=10
   return (
     <div>
 
 
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <C1 value={a}/>
+      
     </div>
     
   )
