@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button data-color="white" class="btn" value="white">Click</button>
+<button data-color="pink" class="btn" value="pink">Click</button>
+<button data-color="blue" class="btn" value="blue">Click</button>
+<h1>Area of Rectangle</h1>
+<form action="">
+
+
+<input type="number" id="height">
+<input type="number" id="width">
+
+<button type="submit">Submit</button>
+
+<p id="area"></p></form>
+<p id="time"> NOW`---`> </p>
+<script>
+
+    console.log("Hello");
+    const buttons=document.querySelectorAll("button")
+    const body=document.querySelector("body")
+const time=document.getElementById("time")
+setInterval(() => {
+    const now = new Date()
+const timeString=now.toLocaleTimeString()
+time.innerHTML=`${timeString}`
+
+}, 1000);
+    buttons.forEach((btn)=>{
+        console.log(btn); 
+        btn.addEventListener("click",(en)=>{ 
+        body.style.backgroundColor=en.target.dataset.color
+        btn.style.backgroundColor=en.target.dataset.color
+        btn.style.color="white" 
+     
+        btn.style.transition="all 0.3s ease-in-out" 
+        console.log(en);
+            
+        })
+
+
+
+    })
+
+
+const form=document.querySelector("form")
+form.addEventListener(("submit"),(e)=>{
+    e.preventDefault()
+    const height=document.getElementById("height").value
+    const width=document.getElementById("width").value
+    const area=document.getElementById("area")
+    if(height=="" || width=="" || height==  0 || width==0){
+        area.innerHTML="Please enter height and width"
+    }
+    else{
+       if (height*width>10){
+        area.innerHTML="Area is " +height*width
+       }
+       else if(height*width==10){
+        area.innerHTML="Area is equal to 10"
+       }
+       else if(height*width<10){
+        area.innerHTML="Area is less than 10"
+       }
+       else{
+        area.innerHTML="Area is less than 10"
+       }
+    }
+
+})
+
+
+</script>
+ 
+</body>
+</html>
