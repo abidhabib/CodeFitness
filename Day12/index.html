@@ -27,12 +27,11 @@
     const buttons=document.querySelectorAll("button")
     const body=document.querySelector("body")
 const time=document.getElementById("time")
-setInterval(() => {
-    const now = new Date()
-const timeString=now.toLocaleTimeString()
-time.innerHTML=`${timeString}`
-
-}, 1000);
+setInterval(()=>{
+    const now=new Date()
+    const timestring=now.toLocaleTimeString()
+    time.innerHTML=`${`<b>${timestring}</b>`}`   
+},1000)
     buttons.forEach((btn)=>{
         console.log(btn); 
         btn.addEventListener("click",(en)=>{ 
