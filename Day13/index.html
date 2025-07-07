@@ -19,32 +19,29 @@
 
   const ul = document.getElementById("images");
 const li=ul.querySelectorAll("li")
-li.forEach((li,index)=>{
+// li.forEach((li,index)=>{
 
-    setTimeout(()=>{
-        document.body.style.backgroundColor="red"   
-      li.style.transition="all 1s ease-in-out"
-        li.style.opacity="0"
-        setTimeout(()=>{
-            document.body.style.backgroundColor="black"   
+    // setTimeout(()=>{
+    //   li.style.transition="all 1s ease-in-out"
+    //     li.style.opacity="0"
+    //     setTimeout(()=>{
 
-            ul.removeChild(li)
+    //         ul.removeChild(li)
 
-        },1000)
+    //     },1000)
         
   
-    },2000*index)
-    })
- 
+    // },2000*index)
+    // })
+const timeFun = () => {
+  const timeNow = new Date();
+  console.log(timeNow.toLocaleTimeString());
+const TimeElement=document.createElement("h1")
+TimeElement.innerHTML=timeNow.toLocaleTimeString()
+li.appendChild(TimeElement)
 
- const arr=[1,2,3,4,5,6,7,8,9]
-    setInterval(() => {
-const timeNow=new Date()
-console.log(timeNow.toLocaleTimeString());
-
-    }, 1000);
-
-
+};
+setInterval(timeFun,1000)
 
 </script>
 
