@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+
+</ul>
+</body>
+
+
+
+<script>
+let data={}
+const ul=document.getElementById("ul")
+const xhr=new XMLHttpRequest()
+xhr.open("GET", "https://jsonplaceholder.typicode.com/posts"
+
+)
+console.log(xhr);
+xhr.onprogress=()=>{
+    console.log("loading");
+    
+} 
+
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      data = JSON.parse(xhr.responseText); // ✅ Parse JSON string
+      console.log(data);
+     data.map((items)=>{
+console.log(items.title);
+ul.innerHTML+=`<li>${items.title}</li>`
+
+      })
+    } else {
+      console.log("Error: Status", xhr.status);
+    }
+  };
+
+xhr.send(null);
+
+</script>
+</html>

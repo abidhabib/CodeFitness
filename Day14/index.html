@@ -8,14 +8,15 @@
 </head>
 
 <body>
-<style>
-    table, th, td {
-  border:1px solid black;
-}
-
-</style>
-<div class="insert">Press Any key</div>
-<!-- 
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <div class="insert">Press Any key</div>
+    <!-- 
     <h1>Hello</h1>
     <button>Stop</button>
     <button id="start">Start</button> -->
@@ -40,7 +41,7 @@
 
 
         // const changeBG = () => {
-            
+
         //     const RandColor = GenerateColor()
         //     document.body.style.backgroundColor = `#${RandColor}`
 
@@ -69,23 +70,23 @@
         //     RandomInterval = null
 
         // })
-        const btn=document.getElementsByClassName('insert')[0]
+        const btn = document.getElementsByClassName('insert')[0]
         console.log();
-        
-        
-        window.addEventListener('keydown',(e)=>{
-            console.log(e.key);
-             const keyName = e.key === ' ' ? 'Space' : e.key;
-    const keyCode = e.keyCode;
 
-btn.innerHTML=`
+
+        window.addEventListener('keydown', (e) => {
+            console.log(e.key);
+            const keyName = e.key === ' ' ? 'Space' : e.key;
+            const keyCode = e.keyCode;
+
+            btn.innerHTML = `
 <table>
   <tr>
     <th>KEY</th>
     <th>VALUE</th>
   </tr>
   <tr>
-    <td>${keyName}</td>
+    <td>${keyName.toUpperCase()}</td>
     <td>${keyCode}</td>
   </tr>
  
@@ -93,7 +94,7 @@ btn.innerHTML=`
 
 
 `
-            
+
         })
     </script>
 </body>
