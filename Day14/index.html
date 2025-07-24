@@ -8,55 +8,92 @@
 </head>
 
 <body>
+<style>
+    table, th, td {
+  border:1px solid black;
+}
 
-
+</style>
+<div class="insert">Press Any key</div>
+<!-- 
     <h1>Hello</h1>
     <button>Stop</button>
-    <button id="start">Start</button>
+    <button id="start">Start</button> -->
+
+
     <script>
-        const HexString = '0123456789abcdef'
-    const GenerateColor=()=>{
+        // const HexString = '0123456789abcdef'
+        // const GenerateColor = () => {
 
-     let RandColor=''
-        for(var i=0;i<6;i++){
-            console.log();
-            RandColor+=HexString[Math.floor(Math.random()*HexString.length)]    
-        }
-        return RandColor
+        //     let RandColor = ''
+        //     for (var i = 0; i < 6; i++) {
+        //         console.log();
+        //         RandColor += HexString[Math.floor(Math.random() * HexString.length)]
+        //     }
+        //     return RandColor
 
-    }
-
-
+        // }
 
 
 
+
+
+
+        // const changeBG = () => {
+            
+        //     const RandColor = GenerateColor()
+        //     document.body.style.backgroundColor = `#${RandColor}`
+
+        // }
+        // const interval = 1000
+        // var RandomInterval
+        // let h1 = document.querySelector("h1")
+        // let start = document.querySelector("#start")
+        // start.addEventListener("click", () => {
+        //     RandomInterval = setInterval(changeTest
+        //         , interval, 'useCapturedValues');
+        // })
+        // var changeTest = (x) => {
+        //     h1.innerHTML = `${new Date().toLocaleTimeString()} ${x}`
+        //     changeBG()
+
+        // }
+
+
+
+        // let button = document.querySelector("button")
+        // button.addEventListener("click", () => {
+        //     console.log("stoper");
+
+        //     clearInterval(RandomInterval)
+        //     RandomInterval = null
+
+        // })
+        const btn=document.getElementsByClassName('insert')[0]
+        console.log();
         
-      const   changeBG=()=>{
-const RandColor=GenerateColor()
-            document.body.style.backgroundColor=`#${RandColor}`
+        
+        window.addEventListener('keydown',(e)=>{
+            console.log(e.key);
+             const keyName = e.key === ' ' ? 'Space' : e.key;
+    const keyCode = e.keyCode;
 
-        }
-        const interval = 1000
-        var RandomInterval
-        let h1 = document.querySelector("h1")
-        let start = document.querySelector("#start")
-        start.addEventListener("click", () => {
-  RandomInterval = setInterval(changeTest
-            , interval, 'useCapturedValues');        })
-        var changeTest = (x) => {
-            h1.innerHTML = `${new Date().toLocaleTimeString()} ${x}`
-                        changeBG()
+btn.innerHTML=`
+<table>
+  <tr>
+    <th>KEY</th>
+    <th>VALUE</th>
+  </tr>
+  <tr>
+    <td>${keyName}</td>
+    <td>${keyCode}</td>
+  </tr>
+ 
+</table>
 
-        }
 
-       
-
-        let button = document.querySelector("button")
-        button.addEventListener("click", () => {
-            console.log("stoper");
-
-            clearInterval( RandomInterval)
-
+`
+            
         })
     </script>
 </body>
