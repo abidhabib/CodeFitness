@@ -10,9 +10,10 @@
 </head>
 
 <body>
-  <ul id="ul">
+  <!-- <ul id="ul">
 
-  </ul>
+  </ul> -->
+  <div class="card">loading...</div>
 </body>
 
 
@@ -100,35 +101,83 @@
   //     console.log("Finally");
   //   })d
   const api = 'https://jsonplaceholder.typicode.com/posts'
-  // async function GetPosts(){
+//   // async function GetPosts(){
 
-  // try {
-  //     const response=await fetch(api)
-  //   const data=await response.json() 
-  //   // console.log(data);
+//   // try {
+//   //     const response=await fetch(api)
+//   //   const data=await response.json() 
+//   //   // console.log(data);
 
-  // } catch (error) {
-  //     console.log(error);
-  // }
-  // }
-  // GetPosts()
+//   // } catch (error) {
+//   //     console.log(error);
+//   // }
+//   // }
+//   // GetPosts()
 
-    fetch(api).then((res) => {
+//   fetch(api).then((res)=>{
+// if(res.ok){
+// return res.json()
+// }
+// else {
+//   throw new Error("error")
 
-      if (res.ok) {
-        return res.json()
-      }
-      else {
-        throw new Error("Error")
-      }
-    }).then((data) => {
-      console.log(data);
+// }
 
-    }).catch((err) => {
-      console.log(err);
+//   }).then((data)=>{
+//  data.map((items)=>{
+// ul.innerHTML+=`<li style="color:red" >${items.body}</li> `
+//  })
+//   }).catch((error)=>{
+//     console.log(error);
 
-    })
+//   })
+
+  const gitApi='https://randomuser.me/api/'
+//   fetch(gitApi).then((res)=>{
+
+// if(res.ok){
   
+// return res.json()
+// }
+// else {
+//   throw new Error("error")
+
+// }
+
+//   }).then((data)=>{
+//     const Userdata=data.results[0]
+//     console.log(Userdata);
+// const card=`
+//     <div><div
+
+
+// `
+
+    
+
+//   })
+// async function getUserData(){
+
+//   try{
+//     const res=await fetch(gitApi)
+//     if(res.ok){
+//       const data= await res.json()
+// console.log(data);
+// return data      
+//     }
+//     else {
+//       throw new Error("error")
+  
+//     }
+  
+//       } catch (error) {
+//         console.log(error);
+        
+//       }
+//   }
+// getUserData()
+
+
 </script>
 
 </html>
