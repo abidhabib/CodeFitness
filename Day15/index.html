@@ -1,48 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
     
     , initial-scale=1.0">
-    <title>Document</title>
+  <title>Document</title>
 </head>
-<body>
-    <ul id="ul">
 
-</ul>
+<body>
+  <ul id="ul">
+
+  </ul>
 </body>
 
 
 
 <script>
-let data={}
-const ul=document.getElementById("ul")
-const xhr=new XMLHttpRequest()
-xhr.open("GET", "https://jsonplaceholder.typicode.com/posts"
+  // let data={}
+  // const ul=document.getElementById("ul")
+  // const xhr=new XMLHttpRequest()
+  // xhr.open("GET", "https://jsonplaceholder.typicode.com/posts"
 
-)
-console.log(xhr);
-xhr.onprogress=()=>{
-    console.log("loading");
-    
-} 
+  // )
+  // console.log(xhr);
+  // xhr.onprogress=()=>{
+  //     console.log("loading");
 
-  xhr.onload = () => {
-    if (xhr.status === 200) {
-      data = JSON.parse(xhr.responseText); // ✅ Parse JSON string
+  // } 
+
+  //   xhr.onload = () => {
+  //     if (xhr.status === 200) {
+  //       data = JSON.parse(xhr.responseText); 
+  //       console.log(data);
+  //      data.map((items)=>{
+  // console.log(items.title);
+  // ul.innerHTML+=`<li>${items.title}</li> `
+
+  //       })
+  //     } else {
+  //       console.log("Error: Status", xhr.status);
+  //     }
+  //   };
+
+  // xhr.send(null);
+
+
+  // const Promise1=new Promise((resolve,reject)=>{
+  //   setTimeout(()=>{
+  // console.log("Promise1");
+
+
+  //   },3000)
+
+  // })
+  // Promise1.then(()=>{
+
+  // console.log("Promise2");
+  // })
+  // new Promise((resolve,reject)=>{
+  //   setTimeout(function(){
+  //     console.log("Promise1");
+  //     resolve("resolved")
+  //   },1001)
+  // }).then((data)=>{
+  //   console.log(data);
+  // })
+
+  // new Promise((resolve, reject) => {
+  //   setTimeout(() => {
+  //     let err = true
+  //     if (err) {
+  //       reject("Error")
+  //     }
+  //     else {
+  //       resolve({
+  //         title: "Promise2",
+  //         body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae."
+  //       })
+  //     }
+
+
+  //   }, 1000)
+
+
+  // })
+  //   .then((data) => {
+
+  //     return data.body
+
+  //   }
+  //   ).then((data) => {
+  //     console.log(data);
+  //   })
+  //   .catch((data) => {
+  //     console.log(data);
+  //   }).finally(() => {
+  //     console.log("Finally");
+  //   })d
+  const api = 'https://jsonplaceholder.typicode.com/posts'
+  // async function GetPosts(){
+
+  // try {
+  //     const response=await fetch(api)
+  //   const data=await response.json() 
+  //   // console.log(data);
+
+  // } catch (error) {
+  //     console.log(error);
+  // }
+  // }
+  // GetPosts()
+  new Promise((resolve, reject) => {
+    fetch(api).then((res) => {
+
+      if (res.ok) {
+        return res.json()
+      }
+      else {
+        throw new Error("Error")
+      }
+    }).then((data) => {
       console.log(data);
-     data.map((items)=>{
-console.log(items.title);
-ul.innerHTML+=`<li>${items.title}</li>`
 
-      })
-    } else {
-      console.log("Error: Status", xhr.status);
-    }
-  };
+    }).catch((err) => {
+      console.log(err);
 
-xhr.send(null);
-
+    })
+  })
 </script>
+
 </html>
