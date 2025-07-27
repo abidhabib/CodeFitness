@@ -177,7 +177,25 @@
 //   }
 // getUserData()
 
-
+async function getUserData() {
+  try{
+    const res=await fetch(gitApi)
+    if(res.ok){
+      const data= await res.json()
+      console.log(data.results[0]);
+      return data      
+    }
+    else {
+      throw new Error("error")
+  
+    }
+  
+      } catch (error) {
+        console.log(error);
+        
+      }
+  }
+  getUserData()
 </script>
 
 </html>
