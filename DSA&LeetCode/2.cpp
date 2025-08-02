@@ -38,17 +38,34 @@
 // }
 #include <iostream>
 using namespace std;
- void print10(int num , int table){
-     for(int i=1;i<=num;i++){
-        cout<<table<< "*" <<i<<"="<<i*table<<endl;
-    }
-}
+//  void print10(int num , int table){
+//      for(int i=1;i<=num;i++){
+//         cout<<table<< "*" <<i<<"="<<i*table<<endl;
+//     }
+// }
 int main(){
-  int table;
+//   int table;
 
-  cout<<"Table of \n";
-cin>>table;
-    print10(10,table);
+//   cout<<"Table of \n";
+// cin>>table;
+//     print10(10,table);
+
+
+    // int i=1;
+    // int n;
+    // int sum=0;
+    // cin>>n;
+    // while(i<=n)
+    // {
+    //     sum=sum+i;
+    //     /* code */
+    //     i=i+1;
+    // }
+    
+    // cout<<sum;
+
+
+
    }
 
 
