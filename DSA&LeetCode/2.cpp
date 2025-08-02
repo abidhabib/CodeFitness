@@ -51,18 +51,22 @@ int main(){
 //     print10(10,table);
 
 
-    // int i=1;
-    // int n;
-    // int sum=0;
-    // cin>>n;
-    // while(i<=n)
-    // {
-    //     sum=sum+i;
-    //     /* code */
-    //     i=i+1;
-    // }
+    int i=1;
+    int n;
+    int sum=0;
+    cin>>n;
+    while(i<=n)
+    {
+if(n%i!=0){
+            sum=sum+i;
+        
+}
+      i=i+1;
+        /* code */
+      
+    }
     
-    // cout<<sum;
+    cout<<sum;
 
 
 
