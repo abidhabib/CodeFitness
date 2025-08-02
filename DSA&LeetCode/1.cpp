@@ -1,14 +1,15 @@
-
 #include <iostream>
-int main(){
-    int num=11;
-    if(num%2==0){
-        return 1;
-    }
-    else 
-    {
-                std::cout << "HELLO"; // Now this line will run if num is odd
+using namespace std;
 
-        return 0;
+int main() {
+    int number;
+    cout << "Enter a number: ";
+
+    if ( number) {
+        cout << "You entered: " << number << endl;
+    } else {
+        cout << "Invalid input. Please enter a number." << endl;
     }
+
+    return 0;
 }
