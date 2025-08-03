@@ -108,7 +108,6 @@ int main(){
       print(n);
           print4(n);
 
-      print2(n);
       print3(9);
     return 0;
 }
