@@ -82,7 +82,20 @@ void print3(int n){
 
 
 }
+void print4(int n){
+    for (int i=1; i<=n;i++){
 
+
+        for(int j=1;j<=n; j++){
+            if(j>=i){
+                cout<<"*";
+            }
+            else
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
 
 int main(){
 
@@ -94,7 +107,8 @@ int main(){
 
     //   print(n);
     //   print2(n);
-      print3(9);
+    //   print3(9);
+    print4(n);
     return 0;
 }
 
