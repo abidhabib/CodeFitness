@@ -2,6 +2,19 @@
 using namespace std;
 
 int main() {
-    cout << "Hello, world!" << endl;
-    return 0;
+   
+int rows=10,columns=10;
+for(int i=1;i<=rows;i++){
+
+    for(int j=1;j<=i;j++){
+
+        cout<<"*";
+
+
+    }
+    cout<<endl;
+}
+
+
+
 }
