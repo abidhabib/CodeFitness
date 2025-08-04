@@ -96,6 +96,38 @@ void print4(int n){
         cout<<endl;
     }
 }
+void print5(int n){
+for(int i=1; i<=n; i++){
+    for(int j=1; j<=n; j++){
+        if(j>=i)
+        cout<<"*";
+
+        else
+        cout<<" ";
+    }
+ 
+    cout<<endl;
+}
+
+}
+
+        void print6(int n){
+            for(int i=1; i<=n; i++){
+                for(int j=1; j<=9; j++){
+                    if (j>=6-i && j<=4+i)
+                    {
+                        /* code */
+                        cout<<"*";
+                    }
+                    else
+                    cout<<" ";
+                    
+             
+                }
+                cout<<endl;
+            }
+        }
+
 
 int main(){
 
@@ -104,11 +136,12 @@ int main(){
       int n=5;
  
    
+    //
+    //   print(n);
+    //       print4(n);
 
-      print(n);
-          print4(n);
-
-      print3(9);
+    //   print3(9);
+    print6(n);
     return 0;
 }
 
