@@ -127,7 +127,20 @@ for(int i=1; i<=n; i++){
                 cout<<endl;
             }
         }
+void print7(int n){
 
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=9; j++){
+            if(j<=6-i || j>=4+i)
+            cout<<"*";
+            else
+            cout<<".";
+        }
+        cout<<endl;
+    }
+
+
+}
 
 int main(){
 
@@ -141,7 +154,8 @@ int main(){
     //       print4(n);
 
     //   print3(9);
-    print6(n);
+    // print6(n);
+    print7(n);
     return 0;
 }
 
