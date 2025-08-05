@@ -184,6 +184,23 @@ cout<<endl;
 }
 }
 
+
+void print10(int n){
+                int count=1;
+
+    for (int i=1;i<=3;i++){
+        for(int j=1; j<=3; j++){
+            cout<<count<<" ";
+            count++;
+
+
+        }
+        cout<<endl;
+
+
+
+    }
+}
 int main(){
 
 
@@ -198,11 +215,12 @@ int main(){
     //   print3(9);
     // print6(n);
     // print8(n);
-    print7(n);
+    // print7(n);
     // print5(n);
     // print2(n);
-    cout<<"----------------"<<endl;
-        print9(n);
+    // cout<<"----------------"<<endl;
+        // print9(n);
+        // print10(n);
 
     return 0;
 
