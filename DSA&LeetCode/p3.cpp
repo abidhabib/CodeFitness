@@ -219,8 +219,6 @@ int main(){
 
 
       int n=4;
- 
-   
 
     // print(n);
     // print4(n);
@@ -233,7 +231,8 @@ int main(){
     // cout<<"----------------"<<endl;
     // print9(n);
     // print10(n);
-     print11(n);
+       print11(n);
+
 
     return 0;
 
