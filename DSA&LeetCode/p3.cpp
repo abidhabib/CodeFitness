@@ -168,12 +168,27 @@ void print8(int n){
         }
     
 }
+void print9(int n){
+
+for(int i=1;i<=n;i++){
+for(int j=1;j<=9;j++){
+
+if(j>=7-i && j<=3+i)
+cout<<" ";
+else
+cout<<"*";
+}
+
+cout<<endl;
+
+}
+}
 
 int main(){
 
 
 
-      int n=4;
+      int n=6;
  
    
     //
@@ -182,7 +197,15 @@ int main(){
 
     //   print3(9);
     // print6(n);
-    print8(n);
+    // print8(n);
+    print7(n);
+    // print5(n);
+    // print2(n);
+    cout<<"----------------"<<endl;
+        print9(n);
+
     return 0;
+
+
 }
 
