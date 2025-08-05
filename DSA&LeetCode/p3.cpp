@@ -186,12 +186,10 @@ cout<<endl;
 
 
 void print10(int n){
-                int count=1;
 
-    for (int i=1;i<=3;i++){
-        for(int j=1; j<=3; j++){
-            cout<<count<<" ";
-            count++;
+    for (int i=1;i<=n;i++){
+        for(int j=1; j<=i; j++){
+            cout<<i;
 
 
         }
@@ -201,26 +199,41 @@ void print10(int n){
 
     }
 }
+void print11(int n){
+    int count =1;
+    for (int i=1;i<=n;i++){
+        for(int j=1; j<=i; j++){
+            cout<<count++;
+
+
+        }
+        cout<<endl;
+
+
+
+    }
+}
+
 int main(){
 
 
 
-      int n=6;
+      int n=4;
  
    
-    //
-    //   print(n);
-    //       print4(n);
 
-    //   print3(9);
+    // print(n);
+    // print4(n);
+    // print3(9);
     // print6(n);
     // print8(n);
     // print7(n);
     // print5(n);
     // print2(n);
     // cout<<"----------------"<<endl;
-        // print9(n);
-        // print10(n);
+    // print9(n);
+    // print10(n);
+     print11(n);
 
     return 0;
 
