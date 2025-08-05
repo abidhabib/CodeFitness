@@ -134,19 +134,46 @@ void print7(int n){
             if(j<=6-i || j>=4+i)
             cout<<"*";
             else
-            cout<<".";
+            cout<<" ";
         }
         cout<<endl;
     }
 
 
 }
+void print8(int n){
+    // print this shape
+//     1    
+//    121
+//   12321
+//  1234321
+    for(int i=1; i<=n; i++){
+            int k=1;
+
+        for(int j=1; j<=7; j++){
+            if(j>=5-i && j<=3+i){
+                
+                    /* code */ 
+                    cout<<k;
+                                            j<4?k++:k--;
+       
+            }       
+                
+            else
+            cout<<" ";
+       
+ 
+            }
+        cout<<endl;
+        }
+    
+}
 
 int main(){
 
 
 
-      int n=5;
+      int n=4;
  
    
     //
@@ -155,7 +182,7 @@ int main(){
 
     //   print3(9);
     // print6(n);
-    print7(n);
+    print8(n);
     return 0;
 }
 
