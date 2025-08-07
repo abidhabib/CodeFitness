@@ -264,6 +264,20 @@ start=start+1;
     }
 
 }
+     
+void print15(int n){
+
+      for(int i=1; i<=n; i++){
+        for(int spaces=1; spaces<=n-i; spaces++){
+            cout<<" ";
+        }
+        for(int j=1; j<=i; j++){
+            cout<<"*";
+        }
+        
+        cout<<endl;
+    }
+}
 
 int main()
 {
@@ -284,6 +298,7 @@ int main()
     // print12(n);
     // print11(n);
     // print13(n);
-    print14(n);
+    // print14(n);
+    print15(n);
     return 0;
 }
