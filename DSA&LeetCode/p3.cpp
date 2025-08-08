@@ -218,14 +218,14 @@ void print11(int n)
 }
 void print12(int n)
 {
-            char a = 'A';
+    char a = 'A';
 
     for (int i = 1; i <= 5; i++)
 
     {
         for (int j = 1; j <= i; j++)
         {
-            char x='A'+i-1;
+            char x = 'A' + i - 1;
             cout << x << " ";
             a++;
         }
@@ -235,13 +235,13 @@ void print12(int n)
 }
 void print13(int n)
 {
-            char a = 'A';
+    char a = 'A';
 
     for (int i = 1; i <= 5; i++)
 
     {
         for (int j = 1; j <= i; j++)
-        {;
+        {
             cout << a << " ";
             a++;
         }
@@ -252,32 +252,53 @@ void print13(int n)
 void print14(int n)
 {
 
-
-      for(int i=1; i<=n; i++){
-        char start='A'+n-i;
-        for(int j=1; j<=i; j++){
-            cout<<start<<" ";
-start=start+1;
+    for (int i = 1; i <= n; i++)
+    {
+        char start = 'A' + n - i;
+        for (int j = 1; j <= i; j++)
+        {
+            cout << start << " ";
+            start = start + 1;
         }
-        
-        cout<<endl;
-    }
 
-}
-     
-void print15(int n){
-
-      for(int i=1; i<=n; i++){
-        for(int spaces=1; spaces<=n-i; spaces++){
-            cout<<" ";
-        }
-        for(int j=1; j<=i; j++){
-            cout<<"*";
-        }
-        
-        cout<<endl;
+        cout << endl;
     }
 }
+
+void print15(int n)
+{
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int spaces = 1; spaces <= n - i; spaces++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+}
+
+
+
+void print16() {
+    for (int row = 1; row <= 5; row++) {
+        for (int space = 0; space < row; space++) {
+            cout << " ";
+        }
+        for (int star = 0; star < 4 - row + 1; star++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+
+
 
 int main()
 {
@@ -299,6 +320,7 @@ int main()
     // print11(n);
     // print13(n);
     // print14(n);
-    print15(n);
+    // print15(n);
+    print16();
     return 0;
 }
