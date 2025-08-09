@@ -286,9 +286,9 @@ void print15(int n)
 
 
 void print16() {
-    for (int row = 1; row <= 5; row++) {
+    for (int row = 1; row <=16000; row++) {
         for (int space = 0; space < row; space++) {
-            cout << " ";
+            cout << "%.#-@";
         }
         for (int star = 0; star < 4 - row + 1; star++) {
             cout << "*";
