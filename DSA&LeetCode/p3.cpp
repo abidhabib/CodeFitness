@@ -302,7 +302,30 @@ void print16() {
 
 int main()
 {
+    int count = 10;
 
+    // print(count);
+    // print2(count);
+    // print3(count);
+    // print4(count);
+    // print5(count);
+    // print6(count);
+    // print7(count);
+    // print8(count);
+    // print9(count);
+    // print10(count);
+    // print11(count);
+    // print12(count);
+    // print13(count);
+    // print14(count);
+    // print15(count);
+    // cout << "----------------" << endl;
+    // print16();
+ for (size_t i = 0; i < count; i++)
+ {
+        cout << "Hello World" << endl;
+ }
+ 
     int n = 4;
 
     // print(n);
